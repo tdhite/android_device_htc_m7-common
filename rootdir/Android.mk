@@ -36,7 +36,7 @@ LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 endif
 
-ifeq ($(TARGET_DEVICE),m7spr)
+ifneq ($(filter m7spr m7wls,$(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
 LOCAL_MODULE		:= fstab.qcom
 LOCAL_MODULE_TAGS	:= optional eng

@@ -89,7 +89,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 27917287424
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Custom Recovery
-ifeq ($(TARGET_DEVICE),m7spr)
+ifneq ($(filter m7spr m7wls,$(TARGET_DEVICE)),)
 TARGET_RECOVERY_FSTAB := device/htc/m7-common/rootdir/etc/fstab.qcom.spr
 else
 TARGET_RECOVERY_FSTAB := device/htc/m7-common/rootdir/etc/fstab.qcom.gsm
