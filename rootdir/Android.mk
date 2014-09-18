@@ -28,7 +28,7 @@ LOCAL_MODULE_PATH	:= $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 endif
 
-ifeq ($(TARGET_DEVICE),m7spr)
+ifneq ($(filter m7spr m7lws,$(TARGET_DEVICE)),)
 include $(CLEAR_VARS)
 LOCAL_MODULE		:= init.target.rc
 LOCAL_MODULE_TAGS	:= optional eng
